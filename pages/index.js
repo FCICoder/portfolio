@@ -34,9 +34,9 @@ const Home = () => {
                 initial="hidden"
                 animate="show"
                 exit="hidden"
-                className="h1"
+                className=" text-3xl"
               >
-                Transforming Ideas <br /> Into{" "}
+                Transforming Ideas Into{" "}
                 <span className="text-accent">Digital Reality</span>
               </motion.h1>
               {/* subtitle */}
@@ -52,15 +52,20 @@ const Home = () => {
             </div>
 
             {/* btn  */}
-            <div className="flex justify-center xl:hidden relative">
+            <motion.div 
+            variants={fadeIn("down", 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="flex justify-center xl:hidden relative">
               <ProjectsBtn />
-            </div>
+            </motion.div>
             <motion.div
               variants={fadeIn("down", 0.4)}
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="hidden xl:flex "
+              className="hidden xl:flex"
             >
               <ProjectsBtn />
             </motion.div>
